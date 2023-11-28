@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 body {
-   background-image:url(IMAGES/PJpatternbg.png);
+   background-image:url(PJpatternbg.png);
    background-size: cover;
    font-family: 'Comfortaa', sans-serif;
    color: rgba(245, 240, 232, 0.9);
@@ -409,7 +409,7 @@ body {
     color: #343809;
     font-size: 45px;
     line-height: 10px;
-    background-image: url(IMAGES/aboutus_bannertoplowop.png);
+    background-image: url(aboutus_bannertoplowop.png);
     border-radius: 10px;
     align-content: center;
     background-repeat: no-repeat;
