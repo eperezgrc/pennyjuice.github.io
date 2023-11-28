@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 body {
-   background-image:url(PJpatternbg.png);
+   background-image:url(IMAGES/PJpatternbg.png);
    background-size: cover;
    font-family: 'Comfortaa', sans-serif;
    color: rgba(245, 240, 232, 0.9);
@@ -409,7 +409,7 @@ body {
     color: #343809;
     font-size: 45px;
     line-height: 10px;
-    background-image: url(aboutus_bannertoplowop.png);
+    background-image: url(IMAGES/aboutus_bannertoplowop.png);
     border-radius: 10px;
     align-content: center;
     background-repeat: no-repeat;
@@ -1074,7 +1074,192 @@ label input:checked ~ span:after {
 }
 
 
+/*-------------------- CONTACT PAGE & SLIDER ---------------*/
 
+.carousel-wrapper {
+    height: 250px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carousel-item{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow{
+    border: solid black;
+    display: inline-block;
+    padding: 12px;
+}
+
+.arrow-prev {
+    left: -30px;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%) rotate(-45deg);
+    border-width: 0 3px 3px 0;
+}
+
+.arrow-next {
+    right: -30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    border-width: 0 3px 3px 0;
+}
+
+.light{
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .arrow, .light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+    }
+}
+
+[id^="item"] {
+    display: none;
+}
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url(IMAGES/slider1.jpg);
+    background-size: cover;
+}
+
+.item-2 {
+    z-index: 2;
+    opacity: 1;
+    background: url(IMAGES/slider2.jpg);
+    background-size: cover;
+}
+
+.item-3 {
+    z-index: 2;
+    opacity: 1;
+    background: url(IMAGES/slider3.jpg);
+    background-size: cover;
+}
+
+*:target ~ .item1 {
+    opacity: 1;
+}
+
+#item-1:target ~ .item-1{
+    opacity:1;
+}
+
+#item-2:target ~ .item-2, #item-3:target ~ .item-3{
+    z-index: 3;
+    opacity: 1; }
+}
+    
+/*-----------------------ATTEMPT 2 SLIDE---------*/
+
+.mySlides {
+    display: none;
+}
+.slide-container{
+    max-width: 1000px;
+    width: auto;
+    position:relative;
+    margin:auto;
+    background-color: #4D533D;
+    padding: 20px 5px 5px 5px;
+    border-radius: 5px 5px 0 0;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slidetext {
+    color: #fff;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align:center;
+    font-family: 'Patrick Hand', cursive;
+    font-style: oblique;
+    text-shadow:
+        2px 3px 2px #000,
+        2px 3px 2px #000,
+        2px 3px 2px #000,
+        2px 3px 2px #000;
+    
+}
+
+.numbertext {
+    color: #000;
+    font-size: 12px;
+    padding: 8px 12x;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #73C37E;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #4D533D;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 400px) {
+    .prev, .next, .slidetext {
+        font-size: 11px;
+    }
+}
 
 /*-----------------------FOOTERS----------------*/
 #footer {
