@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 body {
-   background-image:url(PJpatternbg.png);
+   background-image:url(IMAGES/PJpatternbg.png);
    background-size: cover;
    font-family: 'Comfortaa', sans-serif;
    color: rgba(245, 240, 232, 0.9);
@@ -409,7 +409,7 @@ body {
     color: #343809;
     font-size: 45px;
     line-height: 10px;
-    background-image: url(aboutus_bannertoplowop.png);
+    background-image: url(IMAGES/aboutus_bannertoplowop.png);
     border-radius: 10px;
     align-content: center;
     background-repeat: no-repeat;
@@ -1074,97 +1074,254 @@ label input:checked ~ span:after {
 }
 
 
-/*-------------------- CONTACT PAGE & SLIDER ---------------*/
+/*-------------------- CONTACT PAGE  ---------------*/
 
-.carousel-wrapper {
-    height: 250px;
+#contact {
+    width: 100%;
+    padding: 5px;
+    height: auto;
+}
+
+.section-header {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: -100px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 45px;
+    color: rgba(152, 176, 102, 1.0);
+    font-style: oblique;
+    text-shadow:
+        2px 3px 2px #000,
+        2px 3px 2px #000,
+        2px 3px 2px #000,
+        2px 3px 2px #000;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
     position: relative;
+    max-width: 900px;
+    background-color: #4D543E;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.form-horizontal {
+    float: left;
+    width: 700px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.form-control, textarea{
+    max-width: 600px;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.send-button {
+    margin-top: 15px;
+    height: 50px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    background-color: #a8baac;
+}
+
+.alt-send-button {
+    width: 400px;
+    height: 75px;
+    transition: all .2s ease-in-out;
+}
+
+.alt-send-button:hover {
+    transform:translate3D(0px, -5px, 0px);
+}
+
+.send-text {
+    display: block;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 22px;
+}
+
+/*---right contact----*/
+
+.direct-contact-container {
+    max-width: 400px;
+}
+
+.contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+}
+
+.list-item {
+    line-height: 4;
+    color: #8cd19b;
+}
+
+.contact-text {
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 1.9px;
+    color: #8cd19b;
+}
+
+.place {
+    margin-left: 62px;
+}
+
+.phone {
+    margin-left: 56px;
+}
+
+.gmail {
+    margin-left: 53px;
+}
+
+.contact-text a {
+    color: #76947d;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+    color: #62bf76;
+    text-decoration: none;
+}
+
+/*---- social media icons contact form -------*/
+.social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
     width: 100%;
     margin: 0 auto;
+    padding: 0;
 }
 
-.carousel-item{
+.social-media-list li a {
+    color: gold;
+}
+
+.social-media-list li {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb( 27, 27, 27);
+    cursor: pointer;
+    transition: all .2 ease-in-out;
+}
+
+.social-media-list li:after{
+    content: '';
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
-    padding: 25px 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    box-shadow 0 0 0 1px;
+    transition: all .2s ease-in-out;
 }
 
-.arrow{
-    border: solid black;
-    display: inline-block;
-    padding: 12px;
+.social-media-list li:hover {
+  background-color: #fff; 
 }
 
-.arrow-prev {
-    left: -30px;
-    position: absolute;
-    top: 50%;
-    transform:translateY(-50%) rotate(-45deg);
-    border-width: 0 3px 3px 0;
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
 }
 
-.arrow-next {
-    right: -30px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) rotate(-45deg);
-    border-width: 0 3px 3px 0;
+.social-media-list li:hover a {
+  color: #000;
 }
 
-.light{
-    color: white;
+
+hr {
+  border-color: rgba(255,255,255,.6);
 }
 
-@media (max-width: 480px) {
-    .arrow, .light .arrow {
-        background-size: 10px;
-        background-position: 10px 50%;
-    }
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .direct-contact-container, .form-horizontal {
+    margin: 0 auto;
+  }  
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }    
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
 }
 
-[id^="item"] {
-    display: none;
-}
+@media screen and (max-width: 569px) {
 
-.item-1 {
-    z-index: 2;
-    opacity: 1;
-    background: url(slider1.jpg);
-    background-size: cover;
-}
-
-.item-2 {
-    z-index: 2;
-    opacity: 1;
-    background: url(slider2.jpg);
-    background-size: cover;
-}
-
-.item-3 {
-    z-index: 2;
-    opacity: 1;
-    background: url(slider3.jpg);
-    background-size: cover;
-}
-
-*:target ~ .item1 {
-    opacity: 1;
-}
-
-#item-1:target ~ .item-1{
-    opacity:1;
-}
-
-#item-2:target ~ .item-2, #item-3:target ~ .item-3{
-    z-index: 3;
-    opacity: 1; }
-}
+  .direct-contact-container, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }  
+  .form-control, textarea {
     
+    margin: 0 auto;
+  }
+ 
+  
+  .name, .email, textarea {
+    width: 280px;
+  } 
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }  
+  .social-media-list {
+    left: 0;
+  }
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+  
+}
+
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+}
 /*-----------------------ATTEMPT 2 SLIDE---------*/
 
 .mySlides {
