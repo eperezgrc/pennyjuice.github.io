@@ -186,6 +186,10 @@ body {
     font-family: 'Patrick Hand', cursive;
 }
 
+.shophead > img {
+   width: 50px;
+   height: 52px;
+
 .redtext {
     color: #EF432D;
     margin: auto;
