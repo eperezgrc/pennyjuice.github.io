@@ -5,25 +5,82 @@
 	<meta name="keywords" content="Las Vegas, kids, concentrate, nutrition, juices, health, childcare, natural">		
 	<meta name="viewport" content="width=device width, initial-scale=1"> 	
 	<title>Penny Juice | Juice Wholesaler, Iowa</title>
-	<link rel="stylesheet" href="mystyle.css">
+	<link rel="stylesheet" href="../mystyle.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Patrick+Hand&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 	
 <body>
     <div id="container">
         <div class="logohead">
-        <center><img src="pjlogolil.png" alt="PJ Logo"></center></div>
+        <center><img src="../IMAGES/pjlogolil.png" alt="PJ Logo"></center></div>
 <div class="navbar">
-  <a class="active" href="index.html"><i class="fa fa-fw fa-lemon-o"></i> Home</a> 
-  <a href="aboutus.html"><i class="fa fa-fw fa-info-circle"></i> About Us</a> 
-  <a href="shop.html"><i class="fa fa-fw fa-shopping-bag"></i> Shop Flavors</a> 
-  <a href="contact.html"><i class="fa fa-fw fa-envelope-o"></i> Contact</a>
+  <a class="active" href="../CODE/index.html"><i class="fa fa-fw fa-lemon-o"></i> Home</a> 
+  <a href="../CODE/aboutus.html"><i class="fa fa-fw fa-info-circle"></i> About Us</a> 
+  <a href="../CODE/shop.html"><i class="fa fa-fw fa-shopping-bag"></i> Shop Flavors</a> 
+  <a href="../CODE/contact.html"><i class="fa fa-fw fa-envelope-o"></i> Contact</a>
 </div>
 
-        
+        <div class="slide-container">
+      <div style="text-align:center">
+     <span class="dot" onclick="currentSlide(1)"></span>
+     <span class="dot" onclick="currentSlide(2)"></span>
+     <span class="dot" onclick="currentSlide(3)"></span>
+     </div>
+         <div class="mySlides fade">
+         <div class="numertext">1 /3</div>
+         <a href="shop.html"><img src="../IMAGES/slide3.png" style="width:100%"></a>
+         <div class="slidetext"></div>
+         </div>
+         
+         <div class="mySlides fade">
+         <div class="numertext">2 /3</div>
+         <a href="aboutus.html"><img src="../IMAGES/slide1.png" style="width:100%"></a>
+         <div class="slidetext"></div>
+         </div>
+         
+         <div class="mySlides fade">
+         <div class="numertext">3 /3</div>
+         <a href="shop.html"><img src="../IMAGES/slide2.png" style="width:100%"></a>
+         <div class="slidetext"></div>
+         </div>
+     
+         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+     </div>
+     
+     <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+      
         <br><br><div class="flex-container">
             <div class="first-left">
              <div class="sunny"><b>Our Most Popular Flavor of the Year:</b> <h1>"Orange Delight"</h1></div>
@@ -33,16 +90,16 @@
                 <div class="vote">"ORANGE DELIGHT satisfies the tastebuds with a cool, crisp, refreshing citrus flavors of lime, kiwi, and orange!"</div>
                 </div>
                 <div class="buttonsub">
-                <p class="buttsub">Vote for Your Favorite Flavor!</p> </div>
+                    <a href="#" target="_blank"><p class="buttsub">Vote for Your Favorite Flavor!</p></a> </div>
                 </div >
-        <!--<div class="first-middle"><div> <img src="bug.png"> </div></div> -->
+        <!--<div class="first-middle"><div> <img src="../IMAGES/bug.png"> </div></div> -->
             <div class="first-right">
               <div id="inline"> 
-               <div class="icon"><img src="orange-slice.png"></div>
+               <div class="icon"><img src="../IMAGES/orange-slice.png"></div>
                 <div class="one">
                 <h5>Sign Up With Your Email to Receive Deals and Updates.</h5></div> 
                 <div class="buttonsub">
-                <p class="buttsub">Subscribe to Our Mailing List</p> </div>
+                    <a href="../CODE/contact.html" target="_blank"><p class="buttsub">Subscribe to Our Mailing List</p></a> </div>
                  </div>
                <div class="popupleft" data-hover="It Just Makes Cents!">
                 WHEN YOU SHOP WITH PENNYJUICE
@@ -52,18 +109,18 @@
         </div><br>
          <div class="flex-container-bottom">
            <div class="firstb-left">
-            <div><img src="bug.png"> <h1>Grab A Jug!</h1></div>
+            <div><img src="../IMAGES/bug.png"> <h1>Grab A Jug!</h1></div>
                
                <div id="multipicbox">
                <div class="boxa">
-                   <img src="banner3_grapes.jpg">
-                   White Grape </div>
+                  <a href="../CODE/shop.html" target="_blank"><img src="../IMAGES/banner3_grapes.jpg">
+                   White Grape</a> </div>
                <div class="boxb"> 
-                   <img src="banner3_apples.jpg">
-                   Apple </div>
+                   <a href="../CODE/shop.html" target="_blank"><img src="../IMAGES/banner3_apples.jpg">
+                   Apple</a> </div>
                <div class="boxc"> 
-                   <img src="banner3_berries.jpg">
-                   Berry </div>
+                   <a href="../CODE/shop.html" target="_blank"><img src="../IMAGES/banner3_berries.jpg">
+                   Berry</a> </div>
                    
                </div>
              </div>
@@ -81,7 +138,7 @@
                 </div> 
                 <div class="committedbox"><b>PennyJuice is 100% committed to providing healthy fruit juice concentrate for children that meet all FDA regulations!</b></div> 
                 <div class="buttonbox">
-                <p class="butt1">FDA Standards</p> </div>
+                <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-juice-hazard-analysis-critical-control-point-hazards-and-controls-guidance-first" target="_blank"><p class="butt1">FDA Standards</p></a> </div>
              </div>
         </div>
         
