@@ -1156,6 +1156,59 @@ label input:checked ~ span:after {
 
 /*-------------------- CONTACT PAGE  ---------------*/
 
+#parentcontact {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(242, 239, 204, 0.8);
+    clear: both;  
+    border-color: #2AA875;
+    border-width: 5px;
+    border-radius: 10px;
+    border-style: double;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 15px;
+    font-family: 'Comfortaa', sans-serif;
+    color: #758A4A;
+    text-align: center;
+    width: 100%;
+
+}
+
+#parentcontact .imgchild{
+    width: 500px;
+    height: 77px;
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    
+}
+
+#parentcontact h1 {
+    font-family: 'Patrick Hand', cursive;
+    font-size:32px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-decoration:underline;
+}
+
+.conchild1 {
+    display: inline-block;
+    background-color: transparent;
+    width: 75%;
+    height: 70px;
+    margin: 5px;
+    text-align:left;
+    padding: 0;
+    font-size: 18px;
+    line-height: 22px;
+    text-align:center;
+}
+
+
 #contact {
     width: 100%;
     padding: 5px;
