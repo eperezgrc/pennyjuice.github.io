@@ -1583,8 +1583,23 @@ hr {
 .hours{
     color: #e3cb61;
     font-size: 20px;
-    
 }
+
+a.boilerlink 
+{color:gold;}
+
+a.boilerlink:link 
+{text-decoration: none; color: gold;}
+
+a.boilerlink:visited 
+{text-decoration: none; color: darkgoldenrod;}
+
+a.boilerlink:hover 
+{text-decoration: underline; color: darkgoldenrod;}
+
+a.boilerlink:active 
+{text-decoration: none; color: red;}
+
     
 
 
