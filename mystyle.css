@@ -180,8 +180,7 @@ body {
     background-color:#5C6350;
     color: #E3CB61;
     border-radius: 10px 10px 0px 0px;
-    padding: 5px;
-   padding-bottom: 25px;
+    padding: 20px 5px 5px 5px;
     width: 425px;
     font-size: 28px;
     font-family: 'Patrick Hand', cursive;
@@ -191,6 +190,7 @@ body {
    width: 25px;
    height: 27px;
    position: relative;
+   padding: 20px 5px 5px 5px;
 }
 
 .redtext {
@@ -222,7 +222,7 @@ body {
 .limitedtime {
     display: inline-block;
     margin: auto;
-    padding: 5px;
+    padding: 10px;
     float: right;
 }
 .limitedtime img{
@@ -613,6 +613,7 @@ body {
     border-radius: 15px 0px 15px 0px;
     justify-content: center;
     align-content: center;
+   padding: 20px 5px 5px 5px;
 }
 
 .abouthead {
@@ -628,7 +629,7 @@ body {
     align-content: center;
     background-repeat: no-repeat;
     flex-direction: column;
-   padding-bottom: 20px;
+   padding: 20px 5px 5px 5px;
 }
 
 .contacthead {
@@ -644,6 +645,7 @@ body {
     align-content: center;
     background-repeat: no-repeat;
     flex-direction: column;
+   padding: 20px 5px 5px 5px;
 }
 
 .shoppinghead {
@@ -659,7 +661,7 @@ body {
     align-content: center;
     background-repeat: no-repeat;
     flex-direction: column;
-   padding-bottom: 25px;
+   padding: 20px 5px 5px 5px;
 }
 
 /*------------------------------homepage grab a jug--------------*/
